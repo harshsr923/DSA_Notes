@@ -1,3 +1,4 @@
+// Method 1
 // Remember: After divide - we have read rem from bottom to top
 // 10 => rem = 0101: but answer is 1010 (we need to reverse)
 // we can do this using vector also
@@ -21,6 +22,20 @@ void toBinary(int N)
         N = N/2;
     }
     cout << MyReverse(rem);
+}
+
+// Method 2
+int main()
+{
+    long long x = 29;
+    string bin;
+    while (x) {
+        bin += (char)((x & 1) + '0');
+        x >>= 1;
+    }
+    reverse(bin.begin(), bin.end());
+    cout << bin << endl;
+    return 0;
 }
 
 IP: 7
